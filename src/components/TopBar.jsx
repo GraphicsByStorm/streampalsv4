@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext'
-import { FaSignInAlt, FaSignOutAlt, FaUser, FaSearch, FaHome, FaQuestionCircle, FaTv, FaSun } from 'react-icons/fa'
+import { FaSignInAlt, FaSignOutAlt, FaUser, FaSearch, FaHome, FaQuestionCircle, FaTv, FaSun, FaTicketAlt, FaCamera, FaCameraRetro, FaVideo } from 'react-icons/fa'
 import { BsFillPlusCircleFill } from 'react-icons/bs'
 
 const TopBar = () => {
@@ -30,11 +30,14 @@ const TopBar = () => {
             <Link to='/'>
                 <TopBarIcon className='dark' icon={<FaHome size='22' />}  text={'Home'} />
             </Link>
-            <Link to='/faq'>
-                <TopBarIcon icon={<FaQuestionCircle size='22' />}  text={'FAQ'} />
+            <Link to='/tvshows'>
+                <TopBarIcon icon={<FaVideo size='22' />}  text={'TV Shows'} />
             </Link>
             <Link to='/search'>
                 <TopBarIcon icon={<FaSearch size='22' />}  text={'Search'} />
+            </Link>
+            <Link to='/faq'>
+                <TopBarIcon icon={<FaQuestionCircle size='22' />}  text={'FAQ'} />
             </Link>
             <Link to='/watch'>
                 <TopBarIcon icon={<FaTv size='22' />}  text={'Watch'} /> 

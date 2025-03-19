@@ -7,8 +7,6 @@ import Movie from './Movie';
 const Main = () => {
     const [movies, setMovies] = useState([]);
 
-    const movie = movies[Math.floor(Math.random() * movies.length)];
-
     const popularPages = popular;
 
     const popularURLs = popularPages.reduce((accumulator, currentURL) => {
@@ -20,7 +18,10 @@ const Main = () => {
             setMovies(response.data.results);
         })
     },[]);
-//    console.log(movie);
+
+    if (!movies.length) return null;
+
+    const movie = movies[Math.floor(Math.random() * movies.length)];
 
     const truncateMovie = (str, num) => {
         if (str?.length > num) {

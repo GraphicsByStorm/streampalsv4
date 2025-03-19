@@ -7,6 +7,8 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Watch from "./pages/Watch";
 import ProtectedRoute from "./components/ProtectedRoute";
+import SearchPage from "./pages/SearchPage";
+import TVShows from "./pages/TVShows";
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/search' element={<SearchPage />} />
+        <Route path='/tvshows' element={<TVShows />} />
         <Route path='/account' element={<ProtectedRoute><Account /></ProtectedRoute>} />
         <Route path='/watch' element={<Watch />} />
       </Routes>

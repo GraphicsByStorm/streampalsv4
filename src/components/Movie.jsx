@@ -10,10 +10,12 @@ const Movie = ({item}) => {
 
     const [like, setLike] = useState(false);
     const [saved, setSaved] = useState(false);
-    const {user} = UserAuth();
-    const movieID = doc(db, 'users', `${user?.email}`)
     const [modalOpen, setModalOpen] = useState(false)
     const navigate = useNavigate();
+    const {user} = UserAuth();
+    const movieID = doc(db, 'users', `${user?.email}`)
+
+    if (!item.poster_path) return null;
 
     const toggleModal = () => {
       setModalOpen(!modalOpen)

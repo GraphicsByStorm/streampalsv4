@@ -16,7 +16,7 @@ const SearchPage = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_TMDB_API_KEY}&query=${query}&page=1&include_adult=true`
+        `https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_TMDB_API_KEY}&query=${query}&page=1`
       );
 
       const results = response.data.results;
